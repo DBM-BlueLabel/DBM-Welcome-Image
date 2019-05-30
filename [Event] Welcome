@@ -1,0 +1,101 @@
+{
+  "name": "Welcome Image",
+  "temp": "member",
+  "event-type": "6",
+  "_id": "ENzio",
+  "actions": [
+    {
+      "comment": "©All rights reserved Blue Label#6215",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "url": "resources/welcome-image.png",
+      "storage": "1",
+      "varName": "welcome",
+      "name": "Create Image"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "36",
+      "storage": "1",
+      "varName2": "member-count",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatarurl",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "3",
+      "storage": "1",
+      "varName2": "member-displayname",
+      "name": "Store Member Info"
+    },
+    {
+      "url": "${tempVars(\"avatarurl\")}",
+      "storage": "1",
+      "varName": "avatar-image",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "avatar-image",
+      "width": "80%",
+      "height": "80%",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "welcome",
+      "storage2": "1",
+      "varName2": "avatar-image",
+      "x": "10",
+      "y": "25",
+      "mask": "0",
+      "name": "Draw Image on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "welcome",
+      "x": "250",
+      "y": "100",
+      "font": "fonts/open-sans.fnt",
+      "width": "",
+      "text": "Welcome ${tempVars(\"member-displayname\")},",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "welcome",
+      "x": "250",
+      "y": "135",
+      "font": "fonts/open-sans.fnt",
+      "width": "",
+      "text": "You're member number ${tempVars(\"member-count\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "info": "1",
+      "find": "welcome",
+      "storage": "1",
+      "varName": "welcome-channel",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "welcome",
+      "channel": "5",
+      "varName2": "welcome-channel",
+      "message": "",
+      "name": "Send Image"
+    }
+  ]
+}
