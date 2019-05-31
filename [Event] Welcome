@@ -5,10 +5,28 @@
   "_id": "ENzio",
   "actions": [
     {
-      "url": "resources/welcome-image.png",
-      "storage": "1",
-      "varName": "welcome",
-      "name": "Create Image"
+      "storage": "2",
+      "varName": "welcome-channel",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "4",
+      "varName": "",
+      "message": "Someone just joined the server but you didn't setup welcome channel.\nPlease setup a welcome channel.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
     },
     {
       "server": "0",
@@ -35,6 +53,19 @@
       "name": "Store Member Info"
     },
     {
+      "url": "resources/welcome-image.png",
+      "storage": "1",
+      "varName": "welcome",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "welcome",
+      "width": "750",
+      "height": "250",
+      "name": "Resize Image"
+    },
+    {
       "url": "${tempVars(\"avatarurl\")}",
       "storage": "1",
       "varName": "avatar-image",
@@ -45,13 +76,6 @@
       "varName": "avatar-image",
       "width": "200",
       "height": "200",
-      "name": "Resize Image"
-    },
-    {
-      "storage": "1",
-      "varName": "welcome",
-      "width": "750",
-      "height": "250",
       "name": "Resize Image"
     },
     {
@@ -85,16 +109,9 @@
       "name": "Draw Text on Image"
     },
     {
-      "info": "1",
-      "find": "welcome",
-      "storage": "1",
-      "varName": "welcome-channel",
-      "name": "Find Channel"
-    },
-    {
       "storage": "1",
       "varName": "welcome",
-      "channel": "5",
+      "channel": "6",
       "varName2": "welcome-channel",
       "message": "",
       "name": "Send Image"
