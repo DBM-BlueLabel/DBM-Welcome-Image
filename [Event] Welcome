@@ -1,14 +1,9 @@
 {
-  "name": "Welcome Image",
+  "name": "Welcome Image Message",
   "temp": "member",
   "event-type": "6",
   "_id": "ENzio",
   "actions": [
-    {
-      "comment": "©All rights reserved Blue Label#6215",
-      "color": "#00ffff",
-      "name": "Comment"
-    },
     {
       "url": "resources/welcome-image.png",
       "storage": "1",
@@ -48,8 +43,15 @@
     {
       "storage": "1",
       "varName": "avatar-image",
-      "width": "80%",
-      "height": "80%",
+      "width": "200",
+      "height": "200",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "welcome",
+      "width": "750",
+      "height": "250",
       "name": "Resize Image"
     },
     {
